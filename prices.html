@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сравнение версий - HEWS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Дополнительные стили только для этой страницы */
+        .versions-hero {
+            background: linear-gradient(135deg, rgba(54, 64, 37, 0.1) 0%, rgba(255, 255, 255, 0.9) 100%);
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .versions-hero h1 {
+            margin-bottom: 20px;
+        }
+        
+        .versions-hero p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+        
+        .comparison-section {
+            padding: 80px 0;
+            background-color: var(--light-gray);
+        }
+        
+        .comparison-container {
+            overflow-x: auto;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+        
+        .comparison-table th, 
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .comparison-table th {
+            background-color: var(--dark-green);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: rgba(187, 207, 154, 0.1);
+        }
+        
+        .comparison-table tr:hover {
+            background-color: rgba(187, 207, 154, 0.2);
+        }
+        
+        .feature-category {
+            background-color: var(--mid-green);
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .feature-name {
+            font-weight: 500;
+            padding-left: 30px !important;
+        }
+        
+        .free-version, .pro-version {
+            text-align: center;
+            width: 20%;
+        }
+        
+        .free-version {
+            background-color: rgba(141, 149, 126, 0.2);
+        }
+        
+        .pro-version {
+            background-color: rgba(54, 64, 37, 0.1);
+        }
+        
+        .check-icon {
+            color: var(--mid-green);
+            font-size: 1.2rem;
+        }
+        
+        .cross-icon {
+            color: #d9534f;
+            font-size: 1.2rem;
+        }
+        
+        .feature-description {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-top: 5px;
+        }
+        
+        .cta-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            max-width: 350px;
+            transition: transform 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-card.free {
+            border-top: 4px solid var(--mid-green);
+        }
+        
+        .pricing-card.pro {
+            border-top: 4px solid var(--dark-green);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pro-badge {
+            position: absolute;
+            top: 20px;
+            right: -40px;
+            background: var(--dark-green);
+            color: white;
+            padding: 5px 40px;
+            transform: rotate(45deg);
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 20px 0;
+            color: var(--dark-green);
+        }
+        
+        .price.free {
+            color: var(--mid-green);
+        }
+        
+        .price-period {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+        
+        .features-list {
+            text-align: left;
+            margin: 30px 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .features-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .features-list i {
+            margin-right: 10px;
+        }
+        
+        .feature-available {
+            color: var(--mid-green);
+        }
+        
+        .feature-unavailable {
+            color: #d9534f;
+        }
+        
+        @media (max-width: 768px) {
+            .pricing-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .pricing-card {
+                width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">HE<span>WS</span></a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html#features">Функции</a></li>
+                    <li><a href="index.html#how-it-works">Как это работает</a></li>
+                    <li><a href="#download">Версии</a></li>
+                    <li><a href="index.html#contact">Контакты</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="versions-hero">
+        <div class="container">
+            <h1>Сравнение версий HEWS</h1>
+            <p>Выберите подходящий план для ваших потребностей в мониторинге здоровья. Бесплатная версия предлагает основные функции, а Pro-версия открывает дополнительные возможности для глубокого анализа и персонализации.</p>
+            <a href="#pricing" class="btn">Выбрать тариф</a>
+        </div>
+    </section>
+
+    <!-- Comparison Table Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Сравнение функций</h2>
+                <p>Подробное сравнение возможностей бесплатной и Pro версий</p>
+            </div>
+            
+            <div class="comparison-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Категория</th>
+                            <th>Функции</th>
+                            <th class="free-version">Бесплатная версия</th>
+                            <th class="pro-version">Pro / Подписка</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3" class="feature-category">Сбор данных</td>
+                            <td class="feature-name">Синхронизация с носимыми устройствами (пульс, ЧСС, давление, шаги, сон)</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Ввод симптомов и самочувствия</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Загрузка лабораторных данных (глюкоза, холестерин, креатинин и др.)</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        
+                        <tr>
+                            <td rowspan="3" class="feature-category">Анализ здоровья</td>
+                            <td class="feature-name">ИИ-модуль оценки риска диабета, гипертонии, ССЗ и CKD</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Выявление отклонений и потенциально опасных паттернов</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Персонализированные рекомендации по питанию, активности, сну</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        
+                        <tr>
+                            <td rowspan="3" class="feature-category">Отчёты и визуализация</td>
+                            <td class="feature-name">Графики трендов показателей</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i> <span class="feature-description">(расширенные, интерактивные)</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">История изменений для самоконтроля</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Экспорт PDF для врача</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i> <span class="feature-description">(расширенные форматы, фильтры)</span></td>
+                        </tr>
+                        
+                        <tr>
+                            <td rowspan="2" class="feature-category">Уведомления</td>
+                            <td class="feature-name">Push при отклонениях от нормы</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i> <span class="feature-description">(приоритетные и кастомизированные)</span></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Напоминания о контроле показателей и анализах</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i> <span class="feature-description">(расширенные, гибкие)</span></td>
+                        </tr>
+                        
+                        <tr>
+                            <td rowspan="2" class="feature-category">Безопасность</td>
+                            <td class="feature-name">Шифрование данных</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Авторизация и защита личной информации</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        
+                        <tr>
+                            <td rowspan="2" class="feature-category">Мотивация и геймификация</td>
+                            <td class="feature-name">Достижения, челленджи</td>
+                            <td class="free-version"><i class="fas fa-times cross-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Социальные функции (сравнение с друзьями / сообществом)</td>
+                            <td class="free-version"><i class="fas fa-times cross-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        
+                        <tr>
+                            <td rowspan="2" class="feature-category">Поддержка и сервис</td>
+                            <td class="feature-name">Стандартная справка и помощь</td>
+                            <td class="free-version"><i class="fas fa-check check-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Возможность консультаций с куратором</td>
+                            <td class="free-version"><i class="fas fa-times cross-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        
+                        <tr>
+                            <td rowspan="3" class="feature-category">Дополнительно</td>
+                            <td class="feature-name">Прогнозирование трендов на несколько месяцев (визуально)</td>
+                            <td class="free-version"><i class="fas fa-times cross-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Расширенные фильтры и кастомизация отчетов</td>
+                            <td class="free-version"><i class="fas fa-times cross-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Бэкап и синхронизация между устройствами без ограничений</td>
+                            <td class="free-version"><i class="fas fa-times cross-icon"></i></td>
+                            <td class="pro-version"><i class="fas fa-check check-icon"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="cta-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Выберите свою версию</h2>
+                <p>Инвестируйте в свое здоровье с подходящим тарифным планом</p>
+            </div>
+            
+            <div class="pricing-cards">
+                <div class="pricing-card free fade-in">
+                    <h3>Бесплатная версия</h3>
+                    <div class="price free">0 ₽</div>
+                    <p>Идеально для базового контроля здоровья</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check feature-available"></i> Синхронизация с устройствами</li>
+                        <li><i class="fas fa-check feature-available"></i> Оценка риска заболеваний</li>
+                        <li><i class="fas fa-check feature-available"></i> Графики показателей</li>
+                        <li><i class="fas fa-check feature-available"></i> Push-уведомления</li>
+                        <li><i class="fas fa-check feature-available"></i> Экспорт отчетов PDF</li>
+                        <li><i class="fas fa-times feature-unavailable"></i> Геймификация</li>
+                        <li><i class="fas fa-times feature-unavailable"></i> Консультации с куратором</li>
+                        <li><i class="fas fa-times feature-unavailable"></i> Прогнозирование трендов</li>
+                    </ul>
+                    
+                    <a href="index.html#download" class="btn btn-light">Начать бесплатно</a>
+                </div>
+                
+                <div class="pricing-card pro fade-in">
+                    <div class="pro-badge">РЕКОМЕНДУЕМ</div>
+                    <h3>Pro версия</h3>
+                    <div class="price">499 ₽ <span class="price-period">/ месяц</span></div>
+                    <p>Полный контроль и расширенные возможности</p>
+                    
+                    <ul class="features-list">
+                        <li><i class="fas fa-check feature-available"></i> Все функции бесплатной версии</li>
+                        <li><i class="fas fa-check feature-available"></i> Расширенные графики и отчеты</li>
+                        <li><i class="fas fa-check feature-available"></i> Кастомизированные уведомления</li>
+                        <li><i class="fas fa-check feature-available"></i> Челенджи и достижения</li>
+                        <li><i class="fas fa-check feature-available"></i> Социальные функции</li>
+                        <li><i class="fas fa-check feature-available"></i> Консультации с куратором</li>
+                        <li><i class="fas fa-check feature-available"></i> Прогнозирование трендов</li>
+                        <li><i class="fas fa-check feature-available"></i> Безлимитная синхронизация</li>
+                    </ul>
+                    
+                    <a href="index.html#download" class="btn">Купить Pro</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">HE<span>WS</span></div>
+                <p>Ваш надежный помощник в профилактике и контроле хронических заболеваний</p>
+                <div class="copyright">
+                    &copy; 2023 Health Early Warning System. Все права защищены.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
