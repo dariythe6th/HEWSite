@@ -496,6 +496,45 @@ footer {
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* Screenshots Section */
+.screenshots {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.screenshots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.screenshot-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.screenshot-item:hover {
+    transform: translateY(-5px);
+}
+
+.screenshot-item img {
+    width: 100%;
+    max-width: fit-content;
+    height: auto;
+    display: block;
+}
+
+.screenshot-item p {
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    color: #364025;
+}
+
 .fade-in.appear {
     opacity: 1;
     transform: translateY(0);

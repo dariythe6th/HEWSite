@@ -213,28 +213,30 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo">HE<span>WS</span></a>
+            <nav class="navbar" aria-label="Основная навигация">
+                <a href="#" class="logo">HE<span>WS</span></a>
                 
                 <ul class="nav-menu">
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="index.html#features">Функции</a></li>
-                    <li><a href="index.html#how-it-works">Как это работает</a></li>
-                    <li><a href="#download">Версии</a></li>
-                    <li><a href="index.html#contact">Контакты</a></li>
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="index.html#features" class="nav-link">Функции</a></li>
+                    <li><a href="index.html#how-it-works" class="nav-link">Как это работает</a></li>
+                    <li><a href="index.html#screenshots" class="nav-link">Скриншоты</a></li>
+                    <li><a href="index.html#download" class="nav-link">Скачать</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Контакты</a></li>
+                    <li><a href="#home" class="nav-link">Подписка</a></li>
                 </ul>
                 
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Меню" aria-expanded="false">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                </div>
+                </button>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="versions-hero">
+    <section id="home" class="versions-hero">
         <div class="container">
             <h1>Сравнение версий HEWS</h1>
             <p>Выберите подходящий план для ваших потребностей в мониторинге здоровья. Бесплатная версия предлагает основные функции, а Pro-версия открывает дополнительные возможности для глубокого анализа и персонализации.</p>
@@ -432,7 +434,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer>
         <div class="container">
