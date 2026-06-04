@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог HEWS</title>
+    <meta name="description" content="Блог проекта HEWS: новости, статьи, обновления о раннем выявлении хронических заболеваний.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+<base target="_blank">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">HE<span>WS</span></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="tech.html">Технология</a></li>
+                    <li><a href="research.html">Исследования</a></li>
+                    <li><a href="for-doctors.html">Врачам</a></li>
+                    <li><a href="team.html">Команда</a></li>
+                    <li><a href="roadmap.html">Дорожная карта</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><button class="theme-toggle" aria-label="Переключить тему"><i class="fas fa-moon"></i></button></li>
+                </ul>
+                <button class="hamburger" aria-label="Меню">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="container">
+            <div class="page-header reveal">
+                <h1>Блог <span class="text-gradient">проекта</span></h1>
+                <p>Новости, статьи, обновления</p>
+            </div>
+
+            <div class="blog-grid stagger-children">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%238fb996'/%3E%3Cstop offset='100%25' style='stop-color:%234a7c59'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='240' fill='url(%23g1)'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='sans-serif' font-size='24' font-weight='bold' opacity='0.9'%3EAI Health%3C/text%3E%3C/svg%3E" alt="AI Health">
+                    </div>
+                    <div>
+                        <h3>Почему раннее выявление спасает жизни?</h3>
+                        <p>Статистика и примеры из практики.</p>
+                        <a href="#">Читать →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23c9a84c'/%3E%3Cstop offset='100%25' style='stop-color:%23a08030'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='240' fill='url(%23g2)'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='sans-serif' font-size='24' font-weight='bold' opacity='0.9'%3EVolunteers%3C/text%3E%3C/svg%3E" alt="Volunteers">
+                    </div>
+                    <div>
+                        <h3>Как мы тестируем ИИ без врачей</h3>
+                        <p>Валидация на открытых датасетах.</p>
+                        <a href="#">Читать →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 240'%3E%3Cdefs%3E%3ClinearGradient id='g3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%231a2e1f'/%3E%3Cstop offset='100%25' style='stop-color:%230d1a12'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='400' height='240' fill='url(%23g3)'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-family='sans-serif' font-size='24' font-weight='bold' opacity='0.9'%3ERoadmap%3C/text%3E%3C/svg%3E" alt="Roadmap">
+                    </div>
+                    <div>
+                        <h3>Дорожная карта: что уже сделано</h3>
+                        <p>Отчёт за первый квартал 2025.</p>
+                        <a href="#">Читать →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo-footer">HE<span>WS</span></div>
+            <p>Ваш надежный помощник в профилактике и контроле хронических заболеваний</p>
+            <div class="footer-links">
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="volunteer.html">Волонтёрам</a>
+                <a href="contact.html">Контакты</a>
+            </div>
+            <div class="copyright">
+                    &copy; 2026 Health Early Warning System. Все права защищены.
+                </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
+    <script src="script.js"></script>
+</body>
+</html>

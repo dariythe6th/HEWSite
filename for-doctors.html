@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HEWS | Врачам</title>
+        <meta
+            name="description"
+            content="Бесплатный инструмент для раннего информирования пациентов. Экспорт отчётов, валидация алгоритмов, интеграция с ЭМК." />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <link rel="stylesheet" href="styles.css" />
+        <base target="_blank" />
+    </head>
+    <body>
+        <div class="custom-cursor"></div>
+
+        <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">HE<span>WS</span></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="tech.html">Технология</a></li>
+                    <li><a href="research.html">Исследования</a></li>
+                    <li><a href="for-doctors.html">Врачам</a></li>
+                    <li><a href="team.html">Команда</a></li>
+                    <li><a href="roadmap.html">Дорожная карта</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><button class="theme-toggle" aria-label="Переключить тему"><i class="fas fa-moon"></i></button></li>
+                </ul>
+                <button class="hamburger" aria-label="Меню">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+        <main class="page">
+            <div class="container">
+                <div class="page-header reveal">
+                    <h1>Медицинским <span class="text-gradient">специалистам</span></h1>
+                    <p>Бесплатный инструмент для раннего информирования пациентов</p>
+                </div>
+
+                <div class="doctors-grid stagger-children">
+                    <div class="doc-card">
+                        <i class="fas fa-chart-simple"></i>
+                        <h3>Экспорт отчётов</h3>
+                        <p>Пациент может поделиться с вами динамикой показателей и прогнозами рисков за 5 лет.</p>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fas fa-hand-holding-medical"></i>
+                        <h3>Полностью бесплатно</h3>
+                        <p>Проект некоммерческий, никаких платежей от врачей или пациентов.</p>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fas fa-flask"></i>
+                        <h3>Приглашение к сотрудничеству</h3>
+                        <p>Ищем врачей-волонтёров для валидации алгоритмов и обратной связи.</p>
+                        <a
+                            href="volunteer.html"
+                            style="
+                                color: var(--accent);
+                                font-weight: 600;
+                                text-decoration: none;
+                                margin-top: 0.5rem;
+                                display: inline-block;
+                            "
+                            >Стать консультантом →</a
+                        >
+                    </div>
+                    <div class="doc-card">
+                        <i class="fas fa-newspaper"></i>
+                        <h3>Для поликлиник</h3>
+                        <p>Возможность интеграции с ЭМК на добровольной основе. Пишите нам.</p>
+                    </div>
+                </div>
+
+                <div class="doctor-quote reveal">
+                    «HEWS не ставит диагноз, а даёт индикатор риска. Это идеальный скрининговый инструмент для
+                    терапевтов» — Др. Елена Воронцова, волонтёр-консультант.
+                </div>
+            </div>
+        </main>
+
+        <footer>
+        <div class="container">
+            <div class="logo-footer">HE<span>WS</span></div>
+            <p>Ваш надежный помощник в профилактике и контроле хронических заболеваний</p>
+            <div class="footer-links">
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="volunteer.html">Волонтёрам</a>
+                <a href="contact.html">Контакты</a>
+            </div>
+            <div class="copyright">
+                    &copy; 2026 Health Early Warning System. Все права защищены.
+                </div>
+        </div>
+    </footer>
+
+        <button id="back-to-top" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Команда HEWS</title>
+    <meta name="description" content="Команда и волонтёры HEWS. Основатель Анна Михайлова и открытое сообщество энтузиастов.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+<base target="_blank">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">HE<span>WS</span></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="tech.html">Технология</a></li>
+                    <li><a href="research.html">Исследования</a></li>
+                    <li><a href="for-doctors.html">Врачам</a></li>
+                    <li><a href="team.html">Команда</a></li>
+                    <li><a href="roadmap.html">Дорожная карта</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><button class="theme-toggle" aria-label="Переключить тему"><i class="fas fa-moon"></i></button></li>
+                </ul>
+                <button class="hamburger" aria-label="Меню">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="container">
+            <div class="page-header reveal">
+                <h1>Команда и <span class="text-gradient">волонтёры</span></h1>
+                <p>Один основатель и открытое сообщество энтузиастов</p>
+            </div>
+
+            <div class="founder-section reveal">
+                <div class="founder-card">
+                    <div class="founder-avatar"><i class="fas fa-user-astronaut"></i></div>
+                    <h3>Дарья Родионова</h3>
+                    <p>Основатель, AI-researcher, full-stack разработчик</p>
+                    <p style="color:var(--text-muted);font-size:0.9rem;">Создаёт HEWS одна, при поддержке 20+ волонтёров по всему миру.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title reveal">
+                <h2>Наши волонтёры</h2>
+            </div>
+
+            <div class="volunteer-stats stagger-children">
+                <div class="vol-stat"><i class="fas fa-code"></i> 6 разработчиков</div>
+                <div class="vol-stat"><i class="fas fa-chart-line"></i> 3 data scientist</div>
+                <div class="vol-stat"><i class="fas fa-user-md"></i> 8 врачей-консультантов</div>
+                <div class="vol-stat"><i class="fas fa-palette"></i> 2 дизайнера</div>
+                <div class="vol-stat"><i class="fas fa-globe"></i> 5 переводчиков</div>
+            </div>
+
+            <div id="volunteer" class="open-positions reveal">
+                <h2>Открытые позиции</h2>
+                <ul>
+                    <li><i class="fas fa-bug"></i> Тестировщик (ручное тестирование)</li>
+                    <li><i class="fas fa-chart-simple"></i> ML-инженер для дообучения моделей</li>
+                    <li><i class="fas fa-file-alt"></i> Медицинский редактор (создание рекомендаций)</li>
+                    <li><i class="fas fa-comment-dots"></i> Community-менеджер (Telegram, соцсети)</li>
+                </ul>
+                <div class="magnetic-wrap" style="margin-top:1.5rem;display:inline-block;">
+                    <a href="volunteer.html" class="btn btn-primary">Заполнить анкету волонтёра</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo-footer">HE<span>WS</span></div>
+            <p>Ваш надежный помощник в профилактике и контроле хронических заболеваний</p>
+            <div class="footer-links">
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="volunteer.html">Волонтёрам</a>
+                <a href="contact.html">Контакты</a>
+            </div>
+            <div class="copyright">
+                    &copy; 2026 Health Early Warning System. Все права защищены.
+                </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
+    <script src="script.js"></script>
+</body>
+</html>

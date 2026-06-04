@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEWS | Технология ИИ</title>
+    <meta name="description" content="Как работает ИИ HEWS: ансамбль XGBoost + LSTM, SHAP-интерпретируемость, федеративное обучение.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+<base target="_blank">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">HE<span>WS</span></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="tech.html">Технология</a></li>
+                    <li><a href="research.html">Исследования</a></li>
+                    <li><a href="for-doctors.html">Врачам</a></li>
+                    <li><a href="team.html">Команда</a></li>
+                    <li><a href="roadmap.html">Дорожная карта</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><button class="theme-toggle" aria-label="Переключить тему"><i class="fas fa-moon"></i></button></li>
+                </ul>
+                <button class="hamburger" aria-label="Меню">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="container">
+            <div class="page-header reveal">
+                <h1>Как работает <span class="text-gradient">ИИ HEWS</span></h1>
+                <p>Научно-обоснованные алгоритмы для раннего предупреждения</p>
+            </div>
+
+            <div class="tech-grid stagger-children">
+                <div class="tech-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Обучающие данные</h3>
+                    <p>UK Biobank (500k+), NHANES, Framingham Heart Study — более 10 000 клинических параметров.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-brain"></i>
+                    <h3>Модель риска</h3>
+                    <p>Ансамбль XGBoost + LSTM для временных рядов. ROC-AUC 0.94 на валидации.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Интерпретируемость</h3>
+                    <p>SHAP-значения показывают, какие факторы влияют на прогноз.</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-laptop-medical"></i>
+                    <h3>Приватность</h3>
+                    <p>Федеративное обучение — данные не покидают устройство пользователя.</p>
+                </div>
+            </div>
+
+            <div class="tech-detail reveal">
+                <h2>Архитектура</h2>
+                <p>Пользователь вносит показатели (или синхронизирует с трекером). Модель анализирует динамику и выдает вероятности 6 заболеваний: диабет 2 типа, гипертония, сердечно-сосудистые события, аритмия, апноэ сна, ХБП. Прогноз обновляется еженедельно.</p>
+                <div class="tech-badge"><i class="fas fa-check-circle"></i> Точность на тестовой выборке: 94% чувствительность, 91% специфичность</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo-footer">HE<span>WS</span></div>
+            <p>Ваш надежный помощник в профилактике и контроле хронических заболеваний</p>
+            <div class="footer-links">
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="volunteer.html">Волонтёрам</a>
+                <a href="contact.html">Контакты</a>
+            </div>
+            <div class="copyright">
+                    &copy; 2026 Health Early Warning System. Все права защищены.
+                </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
+    <script src="script.js"></script>
+</body>
+</html>

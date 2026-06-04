@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты HEWS</title>
+    <meta name="description" content="Свяжитесь с командой HEWS: email, социальные сети, форма обратной связи.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <base target="_blank">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">HE<span>WS</span></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="tech.html">Технология</a></li>
+                    <li><a href="research.html">Исследования</a></li>
+                    <li><a href="for-doctors.html">Врачам</a></li>
+                    <li><a href="team.html">Команда</a></li>
+                    <li><a href="roadmap.html">Дорожная карта</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><button class="theme-toggle" aria-label="Переключить тему"><i class="fas fa-moon"></i></button></li>
+                </ul>
+                <button class="hamburger" aria-label="Меню">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="container">
+            <div class="page-header reveal">
+                <h1>Свяжитесь <span class="text-gradient">с нами</span></h1>
+                <p>Мы всегда рады вопросам, предложениям и сотрудничеству</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <div class="glass" style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-envelope" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:hello@hews.org" style="color: var(--accent);">hello@hews.org</a><br>Для общих вопросов</p>
+                    <p><a href="mailto:volunteer@hews.org" style="color: var(--accent);">volunteer@hews.org</a><br>Для волонтёров</p>
+                    <p><a href="mailto:privacy@hews.org" style="color: var(--accent);">privacy@hews.org</a><br>По вопросам данных</p>
+                </div>
+
+                <div class="glass" style="text-align: center; padding: 2rem;">
+                    <i class="fab fa-telegram" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                    <h3>Telegram</h3>
+                    <p><a href="https://t.me/hews_project" style="color: var(--accent);">@hews_project</a><br>Новости проекта</p>
+                    <p><a href="https://t.me/hews_chat" style="color: var(--accent);">Чат волонтёров</a><br>Обсуждение и помощь</p>
+                </div>
+
+                <div class="glass" style="text-align: center; padding: 2rem;">
+                    <i class="fab fa-github" style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/hews-org" style="color: var(--accent);">/hews-org</a><br>Открытый код, модели, issue</p>
+                    <p>⭐ Звёзды и PR приветствуются</p>
+                </div>
+            </div>
+
+            <div class="glass" style="max-width: 700px; margin: 2rem auto; padding: 2rem; text-align: center;">
+                <h2>Напишите нам напрямую</h2>
+                <form id="contact-form" style="margin-top: 1.5rem;">
+                    <input type="text" placeholder="Ваше имя" id="contact-name" style="width: 100%; padding: 0.9rem; margin-bottom: 1rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; color: var(--text-primary);">
+                    <input type="email" placeholder="Email для ответа" id="contact-email" style="width: 100%; padding: 0.9rem; margin-bottom: 1rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; color: var(--text-primary);">
+                    <textarea placeholder="Ваше сообщение..." rows="5" id="contact-message" style="width: 100%; padding: 0.9rem; margin-bottom: 1rem; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; color: var(--text-primary); font-family: var(--font-body);"></textarea>
+                    <button type="submit" class="btn btn-primary">Отправить</button>
+                </form>
+                <p class="privacy-note" style="margin-top: 1rem; font-size: 0.8rem;">Ваше сообщение будет отправлено основателю Дарья. Ответ в течение 2–3 рабочих дней.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo-footer">HE<span>WS</span></div>
+            <p>Ваш надежный помощник в профилактике и контроле хронических заболеваний</p>
+            <div class="footer-links">
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="volunteer.html">Волонтёрам</a>
+                <a href="contact.html">Контакты</a>
+            </div>
+            <div class="copyright">
+                    &copy; 2026 Health Early Warning System. Все права защищены.
+                </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('contact-name').value.trim();
+            const email = document.getElementById('contact-email').value.trim();
+            const msg = document.getElementById('contact-message').value.trim();
+            if (!name || !email || !msg) {
+                alert('Пожалуйста, заполните все поля.');
+                return;
+            }
+            alert('Сообщение отправлено! Мы свяжемся с вами в ближайшее время.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>

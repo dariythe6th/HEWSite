@@ -10,7 +10,6 @@
     <style>
         /* Дополнительные стили только для этой страницы */
         .versions-hero {
-            background: linear-gradient(135deg, rgba(54, 64, 37, 0.1) 0%, rgba(255, 255, 255, 0.9) 100%);
             padding: 120px 0 80px;
             text-align: center;
         }
@@ -92,7 +91,7 @@
         }
         
         .cross-icon {
-            color: #d9534f;
+            color: #ffffff;
             font-size: 1.2rem;
         }
         
@@ -116,7 +115,7 @@
         }
         
         .pricing-card {
-            background: white;
+            background-color: #343d2c;
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -192,10 +191,6 @@
             color: var(--mid-green);
         }
         
-        .feature-unavailable {
-            color: #d9534f;
-        }
-        
         @media (max-width: 768px) {
             .pricing-cards {
                 flex-direction: column;
@@ -213,20 +208,20 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <nav class="navbar" aria-label="Основная навигация">
-                <a href="#" class="logo">HE<span>WS</span></a>
-                
+            <nav class="navbar">
+                <a href="index.html" class="logo">HE<span>WS</span></a>
                 <ul class="nav-menu">
-                    <li><a href="index.html" class="nav-link">Главная</a></li>
-                    <li><a href="index.html#features" class="nav-link">Функции</a></li>
-                    <li><a href="index.html#how-it-works" class="nav-link">Как это работает</a></li>
-                    <li><a href="index.html#screenshots" class="nav-link">Скриншоты</a></li>
-                    <li><a href="index.html#download" class="nav-link">Скачать</a></li>
-                    <li><a href="index.html#contact" class="nav-link">Контакты</a></li>
-                    <li><a href="#home" class="nav-link">Подписка</a></li>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="tech.html">Технология</a></li>
+                    <li><a href="research.html">Исследования</a></li>
+                    <li><a href="for-doctors.html">Врачам</a></li>
+                    <li><a href="team.html">Команда</a></li>
+                    <li><a href="roadmap.html">Дорожная карта</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><button class="theme-toggle" aria-label="Переключить тему"><i class="fas fa-moon"></i></button></li>
                 </ul>
-                
-                <button class="hamburger" aria-label="Меню" aria-expanded="false">
+                <button class="hamburger" aria-label="Меню">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -240,7 +235,7 @@
         <div class="container">
             <h1>Сравнение версий HEWS</h1>
             <p>Выберите подходящий план для ваших потребностей в мониторинге здоровья. Бесплатная версия предлагает основные функции, а Pro-версия открывает дополнительные возможности для глубокого анализа и персонализации.</p>
-            <a href="#pricing" class="btn">Выбрать тариф</a>
+            <a href="#pricing" class="btn btn-primary">Выбрать тариф</a>
         </div>
     </section>
 
@@ -409,7 +404,7 @@
                         <li><i class="fas fa-times feature-unavailable"></i> Прогнозирование трендов</li>
                     </ul>
                     
-                    <a href="index.html#download" class="btn btn-light">Начать бесплатно</a>
+                    <a href="index.html#download" class="btn btn-primary">Начать бесплатно</a>
                 </div>
                 
                 <div class="pricing-card pro fade-in">
@@ -429,7 +424,7 @@
                         <li><i class="fas fa-check feature-available"></i> Безлимитная синхронизация</li>
                     </ul>
                     
-                    <a href="index.html#download" class="btn">Купить Pro</a>
+                    <a href="index.html#download" class="btn btn-primary">Купить Pro</a>
                 </div>
             </div>
         </div>
@@ -438,13 +433,16 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="logo">HE<span>WS</span></div>
-                <p>Ваш надежный помощник в профилактике и контроле хронических заболеваний</p>
-                <div class="copyright">
-                    &copy; 2023 Health Early Warning System. Все права защищены.
-                </div>
+            <div class="logo-footer">HE<span>WS</span></div>
+            <p>Ваш надежный помощник в профилактике и контроле хронических заболеваний</p>
+            <div class="footer-links">
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="volunteer.html">Волонтёрам</a>
+                <a href="contact.html">Контакты</a>
             </div>
+            <div class="copyright">
+                    &copy; 2026 Health Early Warning System. Все права защищены.
+                </div>
         </div>
     </footer>
 

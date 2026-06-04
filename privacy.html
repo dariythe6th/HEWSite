@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика конфиденциальности | HEWS</title>
+    <meta name="description" content="Политика обработки персональных данных HEWS: шифрование, анонимизация, никакой продажи данных.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <base target="_blank">
+</head>
+<body>
+    <div class="custom-cursor"></div>
+
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">HE<span>WS</span></a>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="tech.html">Технология</a></li>
+                    <li><a href="research.html">Исследования</a></li>
+                    <li><a href="for-doctors.html">Врачам</a></li>
+                    <li><a href="team.html">Команда</a></li>
+                    <li><a href="roadmap.html">Дорожная карта</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><button class="theme-toggle" aria-label="Переключить тему"><i class="fas fa-moon"></i></button></li>
+                </ul>
+                <button class="hamburger" aria-label="Меню">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <div class="container">
+            <div class="page-header reveal">
+                <h1>Политика <span class="text-gradient">конфиденциальности</span></h1>
+                <p>Ваши данные под нашей защитой</p>
+            </div>
+
+            <div class="privacy-content glass" style="padding: 2.5rem; border-radius: var(--radius-lg); margin-top: 1rem;">
+                <p><strong>Актуально от 1 июня 2025 года</strong></p>
+                
+                <h2>1. Какие данные мы собираем</h2>
+                <p>HEWS собирает только минимально необходимые для прогноза показатели:</p>
+                <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; margin-top: 1.5rem">
+                    <li>Возраст, пол, рост, вес</li>
+                    <li>Артериальное давление, пульс</li>
+                    <li>Уровень глюкозы (опционально)</li>
+                    <li>Данные о сне и физической активности (если вы синхронизируете трекер)</li>
+                </ul>
+                <p style="margin-bottom: 1.5rem;">Мы <strong>не собираем</strong>: ФИО, точный адрес, паспортные данные, номера телефонов (кроме email для пилотного доступа).</p>
+
+                <h2>2. Как мы используем ваши данные</h2>
+                <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; margin-top: 1.5rem">
+                    <li>Расчёт индивидуальных рисков хронических заболеваний</li>
+                    <li>Улучшение и валидация наших ИИ-моделей (только в обезличенном виде)</li>
+                    <li>Научные исследования (на агрегированных данных)</li>
+                </ul>
+                <p style="margin-bottom: 1.5rem;"><strong>Мы никогда не продаём и не передаём ваши данные третьим лицам.</strong> Ни рекламодателям, ни страховым компаниям, ни кому-либо ещё.</p>
+
+                <h2>3. Шифрование и хранение</h2>
+                <p style="margin-bottom: 1.5rem; margin-top: 1.5rem">Все данные шифруются на устройстве пользователя перед отправкой на сервер (AES-256). В базе данных хранятся только хешированные идентификаторы. При федеративном обучении данные вообще не покидают ваш браузер или приложение.</p>
+
+                <h2>4. Ваши права</h2>
+                <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem; margin-top: 1.5rem">
+                    <li>Запросить удаление всех ваших данных — напишите privacy@hews.org</li>
+                    <li>Отказаться от участия в исследованиях в любой момент</li>
+                    <li>Экспортировать свои прогнозы в JSON / PDF</li>
+                </ul>
+
+                <h2>5. Cookies</h2>
+                <p style="margin-bottom: 1.5rem; margin-top: 1.5rem">Мы используем только технические cookies (без трекеров). Они не содержат персональных данных и нужны для работы темы, анимаций и формы входа.</p>
+
+                <div class="privacy-badge" style="margin-top: 2rem; padding: 1rem; background: var(--bg-secondary); border-radius: var(--radius-md); text-align: center; border: 1px solid var(--border);">
+                    <i class="fas fa-shield-alt" style="color: var(--accent); margin-right: 0.5rem;"></i>
+                    HEWS соответствует принципам GDPR и HIPAA (безопасность медицинской информации).
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="logo-footer">HE<span>WS</span></div>
+            <p>Ваш надежный помощник в профилактике и контроле хронических заболеваний</p>
+            <div class="footer-links">
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="volunteer.html">Волонтёрам</a>
+                <a href="contact.html">Контакты</a>
+            </div>
+            <div class="copyright">
+                    &copy; 2026 Health Early Warning System. Все права защищены.
+                </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
+    <script src="script.js"></script>
+</body>
+</html>

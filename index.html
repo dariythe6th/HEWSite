@@ -1,34 +1,36 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HEWS - приложение для раннего выявления хронических заболеваний. Мониторинг здоровья, ИИ-анализ, персональные рекомендации.">
-    <title>HEWS - Раннее выявление хронических заболеваний</title>
+    <title>HEWS | Раннее выявление хронических заболеваний</title>
+    <meta name="description" content="HEWS — некоммерческий ИИ-проект для раннего выявления хронических заболеваний. Бесплатно, научно обосновано, конфиденциально.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+<base target="_blank">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Custom cursor element -->
+    <div class="custom-cursor"></div>
+
     <header>
         <div class="container">
-            <nav class="navbar" aria-label="Основная навигация">
-                <a href="#" class="logo">HE<span>WS</span></a>
-                
+            <nav class="navbar">
+                <a href="index.html" class="logo">HE<span>WS</span></a>
                 <ul class="nav-menu">
-                    <li><a href="#home" class="nav-link">Главная</a></li>
-                    <li><a href="#features" class="nav-link">Функции</a></li>
-                    <li><a href="#how-it-works" class="nav-link">Как это работает</a></li>
-                    <li><a href="#screenshots" class="nav-link">Скриншоты</a></li>
-                    <li><a href="#download" class="nav-link">Скачать</a></li>
-                    <li><a href="#contact" class="nav-link">Контакты</a></li>
-                    <li><a href="prices.html" class="nav-link">Подписка</a></li>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="tech.html">Технология</a></li>
+                    <li><a href="research.html">Исследования</a></li>
+                    <li><a href="for-doctors.html">Врачам</a></li>
+                    <li><a href="team.html">Команда</a></li>
+                    <li><a href="roadmap.html">Дорожная карта</a></li>
+                    <li><a href="blog.html">Блог</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><button class="theme-toggle" aria-label="Переключить тему"><i class="fas fa-moon"></i></button></li>
                 </ul>
-                
-                <button class="hamburger" aria-label="Меню" aria-expanded="false">
+                <button class="hamburger" aria-label="Меню">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -37,300 +39,330 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="flex">
-            <div class="hero-content">
-                <h1>HEWS — Ваш помощник в раннем выявлении хронических заболеваний</h1>
-                <p>Следите за своим здоровьем, получайте персональные рекомендации и предупреждения на основе ИИ</p>
-                <p>HEWS помогает выявлять риски диабета, гипертонии и сердечно-сосудистых заболеваний на ранней стадии, контролировать показатели и получать советы, чтобы жить дольше и здоровее.</p>
-                <div class="hero-btns">
-                    <a href="#download" class="btn">Начать сейчас</a>
-                    <a href="#features" class="btn btn-light">Узнать больше</a>
-                </div>
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-bg">
+                <div class="hero-blob"></div>
+                <div class="hero-blob"></div>
+                <div class="hero-blob"></div>
             </div>
-            <img class="Log" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MDAiIGhlaWdodD0iODAwIiB2aWV3Qm94PSIwIDAgODAwIDgwMCI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzM2NDAyNSIgZmlsbC1vcGFjaXR5PSIwLjEiLz48Y2lyY2xlIGN4PSI0MDAiIGN5PSI0MDAiIHI9IjIwMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjOEQ5NTdFIiBzdHJva2Utd2lkdGg9IjE1Ii8+PGNpcmNsZSBjeD0iNDAwIiBjeT0iNDAwIiByPSIxNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0JCQ0Y5QSIgc3Ryb2tlLXdpZHRoPSIxNSIvPjxjaXJjbGUgY3g9IjQwMCIgY3k9IjQwMCIgcj0iMTAwIiBmaWxsPSJub25lIiBzdHJva2U9IiM4RDk1N0UiIHN0cm9rZS13aWR0aD0iMTUiLz48cGF0aCBkPSJNNDAwLDIwMCBDMjAwLDIwMCAyMDAsNjAwIDQwMCw2MDAgQzYwMCw2MDAgNjAwLDIwMCA0MDAsMjAwIFoiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0JCQ0Y5QSIgc3Ryb2tlLXdpZHRoPSIxNSIvPjxwYXRoIGQ9Ik0yMDAsNDAwIEMyMDAsMjAwIDYwMCwyMDAgNjAwLDQwMCBDNjAwLDYwMCAyMDAsNjAwIDIwMCw0MDAgWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMzY0MDI1IiBzdHJva2Utd2lkdGg9IjE1IiBzdHJva2Utb3BhY2l0eT0iMC41Ii8+PC9zdmc+" alt="HEWS App" class="hero-image fade-in" loading="lazy">
-            </div> 
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <div class="section-title">
-                <h2>Функции приложения</h2>
-                <p>Все необходимое для контроля вашего здоровья в одном месте</p>
-            </div>
-            
-            <div class="features-grid">
-    <div class="feature-card fade-in">
-        <div class="feature-icon">
-            <i class="fas fa-heartbeat"></i>
-        </div>
-        <h3>Мониторинг показателей</h3>
-        <p>Отслеживайте в реальном времени пульс, давление, уровень глюкозы, качество сна и физическую активность. Все данные в одном удобном интерфейсе.</p>
-    </div>
-    
-    <div class="feature-card fade-in">
-        <div class="feature-icon">
-            <i class="fas fa-bell"></i>
-        </div>
-        <h3>ИИ-уведомления</h3>
-        <p>Получайте своевременные предупреждения о повышенном риске и персонализированные рекомендации для улучшения вашего состояния.</p>
-    </div>
-    
-    <div class="feature-card fade-in">
-        <div class="feature-icon">
-            <i class="fas fa-user-md"></i>
-        </div>
-        <h3>Интеграция с врачами</h3>
-        <p>Делитесь результатами анализов и данными мониторинга с вашим лечащим врачом. Храните всю историю в одном безопасном месте.</p>
-    </div>
-    
-    <div class="feature-card fade-in">
-        <div class="feature-icon">
-            <i class="fas fa-apple-alt"></i>
-        </div>
-        <h3>Персонализированные советы</h3>
-        <p>Получайте рекомендации по питанию, физической активности и образу жизни, разработанные специально для вашего состояния здоровья.</p>
-    </div>
-
-    <!-- 🔒 Безопасность данных -->
-    <div class="feature-card fade-in">
-        <div class="feature-icon">
-            <i class="fas fa-shield-alt"></i>
-        </div>
-        <h3>Защита вашей информации</h3>
-        <p>Ваши медицинские данные надежно зашифрованы и хранятся в соответствии с международными стандартами безопасности.</p>
-    </div>
-
-    <!-- 📊 Аналитика и отчеты -->
-    <div class="feature-card fade-in">
-        <div class="feature-icon">
-            <i class="fas fa-chart-line"></i>
-        </div>
-        <h3>Умная аналитика</h3>
-        <p>Просматривайте наглядные графики и отчеты, чтобы лучше понимать динамику вашего здоровья и прогресс.</p>
-    </div>
-
-    <!-- 🌍 Поддержка устройств -->
-    <div class="feature-card fade-in">
-        <div class="feature-icon">
-            <i class="fas fa-mobile-alt"></i>
-        </div>
-        <h3>Интеграция с гаджетами</h3>
-        <p>Подключайте умные часы, фитнес-браслеты и другие устройства, чтобы собирать больше данных о вашем здоровье.</p>
-    </div>
-
-    <!-- 🧘‍♀️ Психологическое здоровье -->
-    <div class="feature-card fade-in">
-        <div class="feature-icon">
-            <i class="fas fa-brain"></i>
-        </div>
-        <h3>Баланс тела и разума</h3>
-        <p>Следите за уровнем стресса, используйте дыхательные практики и упражнения для улучшения психоэмоционального состояния.</p>
-    </div>
-</div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <div class="section-title">
-                <h2>Как это работает</h2>
-                <p>Простой и эффективный подход к управлению вашим здоровьем</p>
-            </div>
-            
-            <div class="steps">
-                <div class="step fade-in">
-                    <div class="step-number">1</div>
-                    <h3>Подключите устройства</h3>
-                    <p>Синхронизируйте свои фитнес-трекеры, умные часы и медицинские устройства. Или вводите данные вручную в удобном интерфейсе.</p>
-                </div>
-                
-                <div class="step fade-in">
-                    <div class="step-number">2</div>
-                    <h3>Анализ ИИ</h3>
-                    <p>Наш искусственный интеллект анализирует ваши показатели, выявляя потенциальные риски и тенденции, которые могут остаться незамеченными.</p>
-                </div>
-                
-                <div class="step fade-in">
-                    <div class="step-number">3</div>
-                    <h3>Получайте рекомендации</h3>
-                    <p>Система отправляет вам уведомления и практические советы, чтобы вы могли своевременно реагировать на изменения состояния здоровья.</p>
-                </div>
-                
-                <div class="step fade-in">
-                    <div class="step-number">4</div>
-                    <h3>Делитесь с врачом</h3>
-                    <p>Экспортируйте отчеты и делитесь результатами с вашим лечащим врачом для более точной диагностики и контроля лечения.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Screenshots Section -->
-    <section id="screenshots" class="screenshots">
-        <div class="container">
-            <div class="section-title">
-                <h2>Интерфейс приложения</h2>
-                <p>Познакомьтесь с удобным и современным дизайном HEWS</p>
-            </div>
-            
-            <div class="screenshots-grid">
-                <div class="screenshot-item fade-in">
-                    <img src="main.jpg" alt="Главный экран HEWS" loading="lazy">
-                    <p>Главный экран с основными показателями</p>
-                </div>
-                
-                <div class="screenshot-item fade-in">
-                    <img src="calendar.jpg" alt="Мониторинг здоровья" loading="lazy">
-                    <p>Детальный мониторинг показателей здоровья</p>
-                </div>
-                
-                <div class="screenshot-item fade-in">
-                    <img src="risks.jpg" alt="ИИ-анализ" loading="lazy">
-                    <p>Анализ данных и рекомендации от ИИ</p>
-                </div>
-                
-                <div class="screenshot-item fade-in">
-                    <img src="grafs.jpg" alt="История и отчеты" loading="lazy">
-                    <p>История измерений и графики прогресса</p>
-                </div>
-                
-                <div class="screenshot-item fade-in">
-                    <img src="tips.jpg" alt="Напоминания" loading="lazy">
-                    <p>Умные напоминания и статьи</p>
-                </div>
-                
-                <div class="screenshot-item fade-in">
-                    <img src="settings.jpg" alt="Настройки профиля" loading="lazy">
-                    <p>Персональные настройки и профиль</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="download" class="download">
-        <div class="container">
-            <div class="section-title">
-                <h2>Скачайте приложение</h2>
-                <p>Доступно для всех современных смартфонов. Начните заботиться о здоровье уже сегодня.</p>
-            </div>
-            
-            <div class="download-buttons">
-                <a href="#" class="download-btn fade-in">
-                    <i class="fab fa-apple download-icon"></i>
-                    <div class="btn-text">
-                        Скачать для <span>App Store</span>
-                    </div>
-                </a>
-                
-                <a href="#" class="download-btn fade-in">
-                    <i class="fab fa-google-play download-icon"></i>
-                    <div class="btn-text">
-                        Скачать для <span>Google Play</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Свяжитесь с нами</h2>
-                <p>Мы всегда рады ответить на ваши вопросы</p>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-info fade-in">
-                    <h3>Наши контакты</h3>
-                    
-                    <div class="contact-detail">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-badge reveal">Некоммерческая инициатива</div>
+                        <h1 class="reveal reveal-delay-1">Снижаем смертность от хронических заболеваний <span class="highlight">с помощью ИИ</span></h1>
+                        <p class="reveal reveal-delay-2">Ежегодно 41 млн человек умирает от ХНИЗ. Большинства смертей можно избежать при раннем выявлении.</p>
+                        <div class="hero-btns reveal reveal-delay-3">
+                            <div class="magnetic-wrap">
+                                <a href="#join" class="btn btn-primary">Присоединиться <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                            <div class="magnetic-wrap">
+                                <a href="tech.html" class="btn btn-outline">Как работает ИИ</a>
+                            </div>
                         </div>
-                        <div>
-                            <h4>Электронная почта</h4>
-                            <p>support@hewsapp.com</p>
+                        <div class="hero-stats reveal reveal-delay-4">
+                            <div class="stat">
+                                <span class="counter stat-number" data-target="18420">0</span>
+                                <span class="stat-label">участников</span>
+                            </div>
+                            <div class="stat">
+                                <span class="counter stat-number" data-target="94">0</span>
+                                <span class="stat-label">% точности</span>
+                            </div>
+                            <div class="stat">
+                                <span class="counter stat-number" data-target="42">0</span>
+                                <span class="stat-label">страны</span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="contact-detail">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+                    <div class="hero-visual reveal reveal-delay-2">
+                        <div class="risk-card-wrap">
+                            <div class="risk-card">
+                                <div class="risk-header">
+                                    <i class="fas fa-heartbeat"></i>
+                                    <span class="risk-title">ИИ-прогноз риска</span>
+                                </div>
+                                <div class="risk-disease" id="disease-name">Сахарный диабет 2 типа</div>
+                                <div class="risk-percent">
+                                    <span class="risk-value" id="risk-value">8</span><span>%</span>
+                                </div>
+                                <div class="progress-bar"><div id="risk-progress" style="width: 8%;"></div></div>
+                                <div class="risk-message" id="risk-message">Низкий риск. Рекомендуется контроль раз в 6 месяцев.</div>
+                                <div class="risk-controls">
+                                    <span class="risk-indicator" id="risk-indicator"></span>
+                                </div>
+                            </div>
                         </div>
-                        <div>
-                            <h4>Телефон</h4>
-                            <p>+7 (495) 123-45-67</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-detail">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4>Адрес</h4>
-                            <p>Москва, ул. Здоровая, д. 7</p>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-icon" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="social-icon" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
                     </div>
                 </div>
-                
-                <div class="contact-form fade-in">
-                    <form id="feedback-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Ваше имя" required>
+            </div>
+        </section>
+
+        <!-- PHONE SHOWCASE -->
+        <section class="phone-showcase">
+            <div class="phone-showcase-bg"></div>
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Как это <span class="text-gradient">выглядит</span></h2>
+                    <p>Интуитивный интерфейс для контроля здоровья</p>
+                </div>
+
+                <div class="phone-stage reveal">
+                    <div class="phone-particles">
+                        <div class="phone-particle"></div>
+                        <div class="phone-particle"></div>
+                        <div class="phone-particle"></div>
+                        <div class="phone-particle"></div>
+                        <div class="phone-particle"></div>
+                        <div class="phone-particle"></div>
+                    </div>
+
+                    <div class="phone-carousel">
+                        <!-- Screen 1: main.jpg -->
+                        <div class="phone-carousel-item active">
+                            <div class="phone-frame">
+                                <div class="phone-screen">
+                                    <img src="main.jpg" alt="Главный экран HEWS — дашборд с рисками">
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <input type="email" placeholder="Ваш email" required>
+
+                        <!-- Screen 2: grafs.jpg -->
+                        <div class="phone-carousel-item">
+                            <div class="phone-frame">
+                                <div class="phone-screen">
+                                    <img src="grafs.jpg" alt="Графики динамики показателей">
+                                </div>
+                            </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <textarea placeholder="Ваше сообщение" required></textarea>
+
+                        <!-- Screen 3: grafs2.jpg -->
+                        <div class="phone-carousel-item">
+                            <div class="phone-frame">
+                                <div class="phone-screen">
+                                    <img src="grafs2.jpg" alt="Детальные графики анализа">
+                                </div>
+                            </div>
                         </div>
-                        
-                        <button type="submit" class="btn">Отправить сообщение</button>
+
+                        <!-- Screen 4: risks.jpg -->
+                        <div class="phone-carousel-item">
+                            <div class="phone-frame">
+                                <div class="phone-screen">
+                                    <img src="risks.jpg" alt="Детальный прогноз рисков">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Screen 5: calendar.jpg -->
+                        <div class="phone-carousel-item">
+                            <div class="phone-frame">
+                                <div class="phone-screen">
+                                    <img src="calendar.jpg" alt="Календарь проверок и напоминаний">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Screen 6: tips.jpg -->
+                        <div class="phone-carousel-item">
+                            <div class="phone-frame">
+                                <div class="phone-screen">
+                                    <img src="tips.jpg" alt="Персонализированные рекомендации">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Screen 7: settings.jpg -->
+                        <div class="phone-carousel-item">
+                            <div class="phone-frame">
+                                <div class="phone-screen">
+                                    <img src="settings.jpg" alt="Настройки профиля и приватности">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="phone-labels">
+                    <div class="phone-label active">
+                        <h3>Главный экран</h3>
+                        <p>Все риски на одном взгляде с динамикой изменений</p>
+                    </div>
+                    <div class="phone-label">
+                        <h3>Графики показателей</h3>
+                        <p>Визуализация динамики здоровья во времени</p>
+                    </div>
+                    <div class="phone-label">
+                        <h3>Детальный анализ</h3>
+                        <p>Глубокий разбор трендов и корреляций</p>
+                    </div>
+                    <div class="phone-label">
+                        <h3>Прогноз рисков</h3>
+                        <p>Точные вероятности с научной интерпретацией</p>
+                    </div>
+                    <div class="phone-label">
+                        <h3>Календарь</h3>
+                        <p>План проверок и персональные напоминания</p>
+                    </div>
+                    <div class="phone-label">
+                        <h3>Рекомендации</h3>
+                        <p>Персонализированные советы по профилактике</p>
+                    </div>
+                    <div class="phone-label">
+                        <h3>Настройки</h3>
+                        <p>Управление профилем и приватностью данных</p>
+                    </div>
+                </div>
+
+                <div class="phone-controls reveal">
+                    <button class="phone-nav prev" aria-label="Предыдущий скриншот"><i class="fas fa-chevron-left"></i></button>
+                    <div class="phone-dots">
+                        <button class="phone-dot active" aria-label="Скриншот 1"></button>
+                        <button class="phone-dot" aria-label="Скриншот 2"></button>
+                        <button class="phone-dot" aria-label="Скриншот 3"></button>
+                        <button class="phone-dot" aria-label="Скриншот 4"></button>
+                        <button class="phone-dot" aria-label="Скриншот 5"></button>
+                        <button class="phone-dot" aria-label="Скриншот 6"></button>
+                        <button class="phone-dot" aria-label="Скриншот 7"></button>
+                    </div>
+                    <button class="phone-nav next" aria-label="Следующий скриншот"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <div class="marquee-wrap">
+            <div class="marquee-track">
+                <span class="marquee-item"><i class="fas fa-shield-alt"></i> Конфиденциальность</span>
+                <span class="marquee-item"><i class="fas fa-brain"></i> Искусственный интеллект</span>
+                <span class="marquee-item"><i class="fas fa-heart"></i> Забота о здоровье</span>
+                <span class="marquee-item"><i class="fas fa-globe"></i> Глобальная миссия</span>
+                <span class="marquee-item"><i class="fas fa-users"></i> Сообщество волонтёров</span>
+                <span class="marquee-item"><i class="fas fa-flask"></i> Научный подход</span>
+                <span class="marquee-item"><i class="fas fa-hand-holding-heart"></i> Бесплатно навсегда</span>
+                <span class="marquee-item"><i class="fas fa-chart-line"></i> Раннее выявление</span>
+                <!-- Duplicate for seamless loop -->
+                <span class="marquee-item"><i class="fas fa-shield-alt"></i> Конфиденциальность</span>
+                <span class="marquee-item"><i class="fas fa-brain"></i> Искусственный интеллект</span>
+                <span class="marquee-item"><i class="fas fa-heart"></i> Забота о здоровье</span>
+                <span class="marquee-item"><i class="fas fa-globe"></i> Глобальная миссия</span>
+                <span class="marquee-item"><i class="fas fa-users"></i> Сообщество волонтёров</span>
+                <span class="marquee-item"><i class="fas fa-flask"></i> Научный подход</span>
+                <span class="marquee-item"><i class="fas fa-hand-holding-heart"></i> Бесплатно навсегда</span>
+                <span class="marquee-item"><i class="fas fa-chart-line"></i> Раннее выявление</span>
+            </div>
+        </div>
+
+        <!-- PROBLEM -->
+        <section class="section problem">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Тихая эпидемия</h2>
+                    <p>Хронические заболевания долго не дают симптомов</p>
+                </div>
+                <div class="problem-grid stagger-children">
+                    <div class="problem-card glass">
+                        <div class="glass-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <h3>47% людей с гипертонией не знают о болезни</h3>
+                        <p>Пока не случается инсульт или инфаркт.</p>
+                    </div>
+                    <div class="problem-card glass">
+                        <div class="glass-icon"><i class="fas fa-apple-alt"></i></div>
+                        <h3>Диабет 2 типа в 80% случаев можно предотвратить</h3>
+                        <p>Но 50% диагнозов ставятся слишком поздно.</p>
+                    </div>
+                    <div class="problem-card glass">
+                        <div class="glass-icon"><i class="fas fa-heartbeat"></i></div>
+                        <h3>Раннее выявление снижает смертность на 40%</h3>
+                        <p>У нас нет доступных систем предупреждения.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="gradient-divider"></div>
+
+        <!-- BENEFITS -->
+        <section class="section why-join">
+            <div class="container">
+                <div class="section-title reveal">
+                    <h2>Почему стать частью HEWS?</h2>
+                    <p>Ты можешь спасти жизни</p>
+                </div>
+                <div class="benefits-grid stagger-children">
+                    <div class="benefit glass">
+                        <i class="fas fa-heart"></i>
+                        <h3>Бесплатно навсегда</h3>
+                        <p>Никаких подписок — только социальная миссия.</p>
+                    </div>
+                    <div class="benefit glass">
+                        <i class="fas fa-flask"></i>
+                        <h3>Научный подход</h3>
+                        <p>Алгоритмы основаны на доказательной медицине.</p>
+                    </div>
+                    <div class="benefit glass">
+                        <i class="fas fa-users"></i>
+                        <h3>Сообщество волонтёров</h3>
+                        <p>Присоединяйтесь к команде единомышленников.</p>
+                    </div>
+                    <div class="benefit glass">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Реальный эффект</h3>
+                        <p>Ваши данные помогут улучшить модель и спасти тысячи жизней.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JOIN -->
+        <section id="join" class="section join">
+            <div class="container">
+                <div class="join-card reveal">
+                    <h2>Станьте пилотным пользователем</h2>
+                    <p>Бесплатный ранний доступ. Вы поможете улучшить алгоритмы и первыми получите ИИ-прогнозы.</p>
+                    <form id="early-access" class="join-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn btn-gold">Записаться <i class="fas fa-paper-plane"></i></button>
                     </form>
+                    <p class="privacy-note">🔒 Никакого спама, только приглашение в пилот.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <!-- VOLUNTEER CTA -->
+        <section class="section volunteer-cta">
+            <div class="container">
+                <div class="volunteer-banner reveal">
+                    <div><i class="fas fa-hand-peace"></i></div>
+                    <div>
+                        <h3>Хотите помогать как волонтёр?</h3>
+                        <p>Разработчики, дизайнеры, врачи, переводчики — нам нужна ваша помощь.</p>
+                    </div>
+                    <div class="magnetic-wrap">
+                        <a href="team.html#volunteer" class="btn btn-primary">Стать волонтёром <i class="fas fa-heart"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="logo"><span>HEWS</span></div>
-                <p>Ваш надежный помощник в профилактике и контроле хронических заболеваний</p>
-                <div class="copyright">
-                    &copy; 2023 Health Early Warning System. Все права защищены.
-                </div>
+            <div class="logo-footer">HE<span>WS</span></div>
+            <p>Ваш надежный помощник в профилактике и контроле хронических заболеваний</p>
+            <div class="footer-links">
+                <a href="privacy.html">Политика конфиденциальности</a>
+                <a href="volunteer.html">Волонтёрам</a>
+                <a href="contact.html">Контакты</a>
             </div>
+            <div class="copyright">
+                    &copy; 2026 Health Early Warning System. Все права защищены.
+                </div>
         </div>
     </footer>
 
+    <button id="back-to-top" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
     <script src="script.js"></script>
 </body>
 </html>
